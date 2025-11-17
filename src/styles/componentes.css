@@ -65,3 +65,116 @@
   background: var(--fondo-secundario);
   color: var(--texto-secundario);
 }
+
+
+
+/* ============================= */
+/* HOME / HERO                   */
+/* ============================= */
+
+.hero {
+  background: linear-gradient(135deg, rgba(255,0,60,0.3), rgba(0,110,255,0.3)),
+              url("https://wallpapers.com/images/hd/gamer-background-48k0ke6uf9j3j9yn.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 30px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--primario);
+  text-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  color: var(--texto);
+}
+
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-hero {
+  background: var(--secundario);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: var(--transicion);
+}
+.btn-hero:hover {
+  background: #1a7bff;
+}
+
+.btn-hero-sec {
+  background: var(--primario);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: var(--transicion);
+}
+.btn-hero-sec:hover {
+  background: #ff1a52;
+}
+
+/* ============================= */
+/* SECCIÓN FUNCIONES             */
+/* ============================= */
+
+.seccion {
+  margin: 50px 0;
+}
+
+.seccion h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--secundario);
+}
+
+.lista-funciones {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-funciones li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borde);
+  font-size: 1.1rem;
+  color: var(--texto-secundario);
+}
+
+/* ============================= */
+/* GRID DE VISTAS                */
+/* ============================= */
+
+.vistas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.vista-card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid var(--borde);
+  transition: var(--transicion);
+  font-size: 1.1rem;
+}
+
+.vista-card:hover {
+  background: var(--hover);
+  transform: translateY(-3px);
+  border-color: var(--secundario);
+}
