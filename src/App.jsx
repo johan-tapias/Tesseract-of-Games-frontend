@@ -18,6 +18,7 @@ function App() {
         <Route path="/reseñas" element={<ListaReseñas />} />
         <Route path="/nueva-reseña" element={<FormularioReseña />} />
         <Route path="/estadisticas" element={<EstadisticasPersonales />} />
+        <Route path="/editar-reseña/:id" element={<FormularioReseña />} />
       </Routes>
     </Router>
   );
