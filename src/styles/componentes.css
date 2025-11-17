@@ -513,3 +513,99 @@
 .btn-submit:hover {
   background: #ff1a52;
 }
+
+
+/* ============================= */
+/* LISTA DE RESEÑAS              */
+/* ============================= */
+
+.lista-reseñas {
+  margin-top: 20px;
+}
+
+.actions-top {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.btn-agregar-reseña {
+  background: var(--primario);
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: var(--transicion);
+}
+.btn-agregar-reseña:hover {
+  background: #ff1a52;
+}
+
+/* GRID GENERAL */
+.reseñas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* TARJETA DE RESEÑA */
+.reseña-card-grande {
+  background: var(--card);
+  border: 1px solid var(--borde);
+  padding: 18px;
+  border-radius: 12px;
+  transition: var(--transicion);
+}
+
+.reseña-card-grande:hover {
+  border-color: var(--secundario);
+  transform: translateY(-4px);
+}
+
+/* HEADER DE LA RESEÑA */
+.reseña-header-grande {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.puntuacion-grande {
+  font-size: 1.3rem;
+  color: var(--primario);
+}
+
+.horas {
+  color: var(--texto-secundario);
+}
+
+/* TEXTO */
+.reseña-texto {
+  color: var(--texto);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* FOOTER */
+.reseña-footer-grande {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.dificultad {
+  color: var(--secundario);
+}
+
+.recomienda.si {
+  color: #00ff88;
+}
+
+.recomienda.no {
+  color: var(--primario);
+}
+
+/* BOTONES */
+.reseña-botones {
+  display: flex;
+  gap: 12px;
+}
