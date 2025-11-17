@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
-import { crearReseña, obtenerReseña, actualizarReseña } from "../services/reseñasService";
+import {
+  crearReseña,
+  obtenerReseña,
+  actualizarReseña,
+} from "../services/reseñasService";
 import { obtenerJuegos } from "../services/juegosService";
 import { useNavigate, useParams } from "react-router-dom";
+import "./../styles/componentes.css";
 
 export default function FormularioReseña() {
   const [juegos, setJuegos] = useState([]);
@@ -11,17 +16,17 @@ export default function FormularioReseña() {
     textoReseña: "",
     horasJugadas: 0,
     dificultad: "Normal",
-    recomendaria: false
+    recomendaria: false,
   });
 
   const { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    obtenerJuegos().then(res => setJuegos(res.data));
+    obtenerJuegos().then((res) => setJuegos(res.data));
 
     if (id) {
-      obtenerReseña(id).then(res => setForm(res.data));
+      obtenerReseña(id).then((res) => setForm(res.data));
     }
   }, [id]);
 
@@ -38,25 +43,34 @@ export default function FormularioReseña() {
     } else {
       await crearReseña(form);
     }
-
     navigate("/reseñas");
   };
 
   return (
-    <div>
-      <h2>{id ? "Editar Reseña" : "Nueva Reseña"}</h2>
+    <div className="form-container">
 
-      <form onSubmit={handleSubmit}>
+      <h1 className="form-title">
+        {id ? "Editar Reseña" : "Nueva Reseña"}
+      </h1>
+
+      <form className="form-card reseña-form" onSubmit={handleSubmit}>
 
         <label>Juego</label>
-        <select name="juegoId" value={form.juegoId} onChange={handleChange}>
-          <option value="">Seleccione un juego</option>
-          {juegos.map(j => (
-            <option key={j._id} value={j._id}>{j.titulo}</option>
+        <select
+          name="juegoId"
+          value={form.juegoId}
+          onChange={handleChange}
+          required
+        >
+          <option value="">Selecciona un juego</option>
+          {juegos.map((j) => (
+            <option key={j._id} value={j._id}>
+              {j.titulo}
+            </option>
           ))}
         </select>
 
-        <label>Puntuación</label>
+        <label>Puntuación (1-5 estrellas)</label>
         <input
           type="number"
           name="puntuacion"
@@ -64,13 +78,16 @@ export default function FormularioReseña() {
           max="5"
           value={form.puntuacion}
           onChange={handleChange}
+          required
         />
 
-        <label>Texto de Reseña</label>
+        <label>Texto de la reseña</label>
         <textarea
           name="textoReseña"
           value={form.textoReseña}
           onChange={handleChange}
+          rows="5"
+          placeholder="Escribe tu opinión sobre el juego..."
         />
 
         <label>Horas Jugadas</label>
@@ -82,13 +99,17 @@ export default function FormularioReseña() {
         />
 
         <label>Dificultad</label>
-        <select name="dificultad" value={form.dificultad} onChange={handleChange}>
+        <select
+          name="dificultad"
+          value={form.dificultad}
+          onChange={handleChange}
+        >
           <option value="Fácil">Fácil</option>
           <option value="Normal">Normal</option>
           <option value="Difícil">Difícil</option>
         </select>
 
-        <label>
+        <label className="check-label">
           <input
             type="checkbox"
             name="recomendaria"
@@ -98,7 +119,9 @@ export default function FormularioReseña() {
           ¿Recomendarías este juego?
         </label>
 
-        <button type="submit">Guardar</button>
+        <button className="btn-submit" type="submit">
+          Guardar Reseña
+        </button>
       </form>
     </div>
   );
