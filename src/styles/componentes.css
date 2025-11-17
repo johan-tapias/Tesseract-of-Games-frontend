@@ -178,3 +178,121 @@
   transform: translateY(-3px);
   border-color: var(--secundario);
 }
+
+
+/* ============================= */
+/* BIBLIOTECA DE JUEGOS          */
+/* ============================= */
+
+.biblioteca {
+  margin-top: 20px;
+}
+
+.titulo-pagina {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--secundario);
+  text-align: center;
+}
+
+.sin-juegos {
+  text-align: center;
+  color: var(--texto-secundario);
+  margin-top: 30px;
+}
+
+/* GRID */
+.grid-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.juego-card {
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transicion);
+  display: flex;
+  flex-direction: column;
+}
+
+.juego-card:hover {
+  border-color: var(--secundario);
+  transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.card-img-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--borde);
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INFO */
+.card-info {
+  padding: 15px;
+}
+
+.card-info h3 {
+  color: var(--primario);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.card-detalle {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* BOTONES */
+.card-botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.btn-card {
+  flex: 1;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: var(--transicion);
+  font-weight: bold;
+  border: none;
+}
+
+/* COLORES BOTONES */
+.btn-card.blue {
+  background: var(--secundario);
+}
+.btn-card.blue:hover {
+  background: #1a7bff;
+}
+
+.btn-card.yellow {
+  background: #d4a300;
+}
+.btn-card.yellow:hover {
+  background: #f7c400;
+}
+
+.btn-card.red {
+  background: var(--primario);
+}
+.btn-card.red:hover {
+  background: #ff1a52;
+}
