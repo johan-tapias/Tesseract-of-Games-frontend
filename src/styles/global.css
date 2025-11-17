@@ -1,0 +1,86 @@
+/* ========================= */
+/* VARIABLES DE COLOR        */
+/* ========================= */
+
+:root {
+  --fondo: #0d0d0f;
+  --fondo-secundario: #141418;
+  --card: #1a1a20;
+
+  --texto: #e6e6e6;
+  --texto-secundario: #9a9a9a;
+
+  --primario: #ff003c;   /* Rojo gamer */
+  --secundario: #006aff; /* Azul eléctrico */
+
+  --borde: #2a2a33;
+  --hover: #1f1f27;
+
+  --transicion: 0.25s ease;
+}
+
+/* ========================= */
+/* RESET GENERAL             */
+/* ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+/* Scrollbar gamer */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primario);
+  border-radius: 4px;
+}
+
+/* Links */
+a {
+  color: var(--secundario);
+  text-decoration: none;
+  transition: var(--transicion);
+}
+a:hover {
+  color: var(--primario);
+}
+
+/* Inputs */
+input, select, textarea {
+  background: var(--fondo-secundario);
+  border: 1px solid var(--borde);
+  padding: 10px;
+  border-radius: 6px;
+  color: var(--texto);
+  width: 100%;
+  margin-bottom: 12px;
+  transition: var(--transicion);
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--secundario);
+}
+
+/* Botones */
+button {
+  background: var(--primario);
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transicion);
+  font-weight: bold;
+}
+button:hover {
+  background: #ff1a52;
+}
