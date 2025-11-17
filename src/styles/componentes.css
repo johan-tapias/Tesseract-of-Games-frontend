@@ -296,3 +296,162 @@
 .btn-card.red:hover {
   background: #ff1a52;
 }
+
+/* ============================= */
+/* DETALLE DEL JUEGO             */
+/* ============================= */
+
+.detalle-juego {
+  margin-top: 20px;
+}
+
+/* BANNER */
+.detalle-banner {
+  position: relative;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.detalle-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+
+.banner-overlay h1 {
+  font-size: 2.5rem;
+  color: var(--primario);
+  text-shadow: 0 0 8px rgba(255,0,0,0.6);
+}
+
+.banner-overlay p {
+  font-size: 1.2rem;
+  color: var(--texto);
+}
+
+/* INFO */
+.detalle-info {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.info-col {
+  flex: 2;
+}
+
+.info-col h2 {
+  color: var(--secundario);
+  margin-bottom: 10px;
+}
+
+.info-extra p {
+  margin-top: 8px;
+  color: var(--texto-secundario);
+}
+
+/* BOTONES */
+.detalle-botones {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-detalle {
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  transition: var(--transicion);
+}
+
+.btn-detalle.blue {
+  background: var(--secundario);
+}
+.btn-detalle.blue:hover {
+  background: #1a7bff;
+}
+
+.btn-detalle.yellow {
+  background: #d4a300;
+}
+.btn-detalle.yellow:hover {
+  background: #f7c400;
+}
+
+/* ============================= */
+/* RESEÑAS DEL JUEGO             */
+/* ============================= */
+
+.detalle-reseñas h2 {
+  color: var(--secundario);
+  margin-bottom: 20px;
+}
+
+.reseñas-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD DE RESEÑA */
+.reseña-card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+  transition: var(--transicion);
+}
+
+.reseña-card:hover {
+  border-color: var(--primario);
+  transform: translateY(-4px);
+}
+
+.reseña-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.puntuacion {
+  color: var(--primario);
+  font-weight: bold;
+}
+
+.horas {
+  color: var(--texto-secundario);
+}
+
+.reseña-texto {
+  color: var(--texto);
+  margin-bottom: 15px;
+}
+
+.reseña-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.dificultad {
+  color: var(--secundario);
+}
+
+.recomienda.si {
+  color: #00ff88;
+}
+
+.recomienda.no {
+  color: var(--primario);
+}
