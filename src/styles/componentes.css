@@ -748,3 +748,49 @@
   border-radius: 3px;
   margin-right: 8px;
 }
+
+/* filtro de la biblioteca  */
+.filtros-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  background: #0d0f1a;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.filtro-buscar {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  background: #111425;
+  border: 1px solid #222744;
+  color: white;
+}
+
+.filtro-select {
+  padding: 8px;
+  border-radius: 6px;
+  background: #111425;
+  border: 1px solid #222744;
+  color: white;
+   width: 15%;
+}
+
+.btn-card.limpiar {
+  background: #2a3045;
+  color: white;
+  border: 1px solid #3d4463;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  max-width: 8%;
+  margin-bottom: 12px;
+}
+
+.btn-card.limpiar:hover {
+  background: #3b425e;
+}
