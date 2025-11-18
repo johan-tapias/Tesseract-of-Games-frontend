@@ -23,40 +23,47 @@ export default function ListaReseñas() {
   const [reseñaAEliminar, setReseñaAEliminar] = useState(null);
 
   const abrirModalReseña = (id) => {
-  setReseñaAEliminar(id);
-  setMostrarModal(true);
-};
+    setReseñaAEliminar(id);
+    setMostrarModal(true);
+  };
 
-const cerrarModalReseña = () => {
-  setMostrarModal(false);
-  setReseñaAEliminar(null);
-};
+  const cerrarModalReseña = () => {
+    setMostrarModal(false);
+    setReseñaAEliminar(null);
+  };
 
-const confirmarEliminarReseña = async () => {
-  try {
-    await eliminarReseña(reseñaAEliminar); // usa tu servicio axios
-    cerrarModalReseña();
-    window.location.reload(); // o navigate
-  } catch (error) {
-    console.error("Error eliminando reseña:", error);
-  }
-};
+  const confirmarEliminarReseña = async () => {
+    try {
+      await eliminarReseña(reseñaAEliminar); // usa tu servicio axios
+      cerrarModalReseña();
+      window.location.reload(); // o navigate
+    } catch (error) {
+      console.error("Error eliminando reseña:", error);
+    }
+  };
 
   return (
     <div className="lista-reseñas">
       {mostrarModal && (
-  <div className="modal-overlay">
-    <div className="modal-container">
-      <h2>Eliminar Reseña</h2>
-      <p>¿Seguro que deseas borrar esta reseña? No podrás recuperarla.</p>
+        <div className="modal-overlay">
+          <div className="modal-container">
+            <h2>Eliminar Reseña</h2>
+            <p>¿Seguro que deseas borrar esta reseña? No podrás recuperarla.</p>
 
-      <div className="modal-buttons">
-        <button className="btn cancelar" onClick={cerrarModalReseña}>Cancelar</button>
-        <button className="btn eliminar" onClick={confirmarEliminarReseña}>Eliminar</button>
-      </div>
-    </div>
-  </div>
-)}
+            <div className="modal-buttons">
+              <button className="btn cancelar" onClick={cerrarModalReseña}>
+                Cancelar
+              </button>
+              <button
+                className="btn eliminar"
+                onClick={confirmarEliminarReseña}
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <h1 className="titulo-pagina">Reseñas</h1>
 
       <div className="actions-top">
@@ -92,9 +99,12 @@ const confirmarEliminarReseña = async () => {
               <Link to={`/editar-reseña/${r._id}`} className="btn-card yellow">
                 Editar
               </Link>
-              <button onClick={() => abrirModalReseña(r._id)} className="btn-card red">
-  Eliminar
-</button>
+              <button
+                onClick={() => abrirModalReseña(r._id)}
+                className="btn-card red"
+              >
+                Eliminar
+              </button>
             </div>
           </div>
         ))}
