@@ -15,9 +15,13 @@ function App() {
     <Router>
       <Header />
 
-      <main className="contenido">
+      <main className="contenido-home">
         <Routes>
           <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
+      <main className="contenido">
+        <Routes>
           <Route path="/biblioteca" element={<BibliotecaJuegos />} />
           <Route path="/juego/:id" element={<JuegoDetalle />} />
           <Route path="/nuevo-juego" element={<FormularioJuego />} />

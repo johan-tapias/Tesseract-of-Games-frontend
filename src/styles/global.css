@@ -1,6 +1,4 @@
-/* ========================= */
 /* VARIABLES DE COLOR        */
-/* ========================= */
 
 :root {
   --fondo: #0d0d0f;
@@ -10,8 +8,8 @@
   --texto: #e6e6e6;
   --texto-secundario: #9a9a9a;
 
-  --primario: #ff003c;   /* Rojo gamer */
-  --secundario: #006aff; /* Azul eléctrico */
+  --primario: #ff003c; 
+  --secundario: #c92c2c; 
 
   --borde: #2a2a33;
   --hover: #1f1f27;
@@ -32,8 +30,23 @@
 body {
   background: var(--fondo);
   color: var(--texto);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
+}
+
+/* ===== TITULOS ===== */
+h1, h2, h3, h4, .titulo-pagina {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 800;  
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+h2 {
+  font-weight: 600;
+}
+h1, h2 {
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.35);
 }
 
 /* Scrollbar gamer */
