@@ -39,6 +39,7 @@
   color: white !important;
   font-weight: bold;
 }
+
 .btn-agregar:hover {
   background: #1a7bff;
 }
@@ -48,7 +49,7 @@
 /* ============================= */
 
 .contenido {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 30px;
 }
@@ -72,725 +73,958 @@
 /* HOME / HERO                   */
 /* ============================= */
 
+/* -----------------------------------------
+   HERO con video — estilo original adaptado
+   ----------------------------------------- */
+
 .hero {
-  background: linear-gradient(135deg, rgba(255,0,60,0.3), rgba(0,110,255,0.3)),
-              url("https://png.pngtree.com/png-clipart/20240901/original/pngtree-wireless-xbox-controller-on-white-png-image_15908916.png");
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  height: 70vh;
   padding: 120px 30px;
   text-align: center;
-  border-radius: 12px;
+  border-radius: 0;
   margin-bottom: 40px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  color: var(--primario);
-  text-shadow: 0 0 15px rgba(255,0,0,0.5);
-}
-
-.hero-content p {
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1.2rem;
-  color: var(--texto);
-}
-
-.hero-buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.btn-hero {
-  background: var(--secundario);
-  padding: 12px 20px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  transition: var(--transicion);
-}
-.btn-hero:hover {
-  background: #1a7bff;
-}
-
-.btn-hero-sec {
-  background: var(--primario);
-  padding: 12px 20px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  transition: var(--transicion);
-}
-.btn-hero-sec:hover {
-  background: #ff1a52;
-}
-
-/* ============================= */
-/* SECCIÓN FUNCIONES             */
-/* ============================= */
-
-.seccion {
-  margin: 50px 0;
-}
-
-.seccion h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--secundario);
-}
-
-.lista-funciones {
-  list-style: none;
-  padding-left: 0;
-}
-
-.lista-funciones li {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--borde);
-  font-size: 1.1rem;
-  color: var(--texto-secundario);
-}
-
-/* ============================= */
-/* GRID DE VISTAS                */
-/* ============================= */
-
-.vistas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-}
-
-.vista-card {
-  background: var(--card);
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
-  border: 1px solid var(--borde);
-  transition: var(--transicion);
-  font-size: 1.1rem;
-}
-
-.vista-card:hover {
-  background: var(--hover);
-  transform: translateY(-3px);
-  border-color: var(--secundario);
-}
-
-
-/* ============================= */
-/* BIBLIOTECA DE JUEGOS          */
-/* ============================= */
-
-.biblioteca {
-  margin-top: 20px;
-}
-
-.titulo-pagina {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--secundario);
-  text-align: center;
-}
-
-.sin-juegos {
-  text-align: center;
-  color: var(--texto-secundario);
-  margin-top: 30px;
-}
-
-/* GRID */
-.grid-juegos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-}
-
-/* CARD */
-.juego-card {
-  background: var(--card);
-  border: 1px solid var(--borde);
-  border-radius: 12px;
   overflow: hidden;
-  transition: var(--transicion);
-  display: flex;
-  flex-direction: column;
+  margin: 0;
 }
 
-.juego-card:hover {
-  border-color: var(--secundario);
-  transform: translateY(-5px);
-}
-
-/* IMAGEN */
-.card-img-container {
+/* VIDEO DE FONDO */
+.hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 300px;
-  overflow: hidden;
-  border-bottom: 1px solid var(--borde);
-}
-
-.card-img-container img {
-  width: 100%;
-  height: 100%;
+  height: 160%;
   object-fit: cover;
 }
-
-/* INFO */
-.card-info {
-  padding: 15px;
-}
-
-.card-info h3 {
-  color: var(--primario);
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.card-detalle {
-  color: var(--texto-secundario);
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-/* BOTONES */
-.card-botones {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.btn-card {
-  flex: 1;
-  padding: 8px 0;
-  font-size: 0.9rem;
-  text-align: center;
-  border-radius: 6px;
-  color: white;
-  cursor: pointer;
-  transition: var(--transicion);
-  font-weight: bold;
-  border: none;
-}
-
-/* COLORES BOTONES */
-.btn-card.blue {
-  background: var(--secundario);
-}
-.btn-card.blue:hover {
-  background: #1a7bff;
-}
-
-.btn-card.yellow {
-  background: #d4a300;
-}
-.btn-card.yellow:hover {
-  background: #f7c400;
-}
-
-.btn-card.red {
-  background: var(--primario);
-}
-.btn-card.red:hover {
-  background: #ff1a52;
-}
-
-/* ============================= */
-/* DETALLE DEL JUEGO             */
-/* ============================= */
-
-.detalle-juego {
-  margin-top: 20px;
-}
-
-/* BANNER */
-.detalle-banner {
-  position: relative;
-  height: 350px;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-.detalle-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(60%);
-}
-
-.banner-overlay {
+  /* CAPA DE COLOR COMO ANTES (DEGRADADO ROJO/AZUL) */
+  /* .hero-overlay {
   position: absolute;
-  bottom: 20px;
-  left: 30px;
-}
-
-.banner-overlay h1 {
-  font-size: 2.5rem;
-  color: var(--primario);
-  text-shadow: 0 0 8px rgba(255,0,0,0.6);
-}
-
-.banner-overlay p {
-  font-size: 1.2rem;
-  color: var(--texto);
-}
-
-/* INFO */
-.detalle-info {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.info-col {
-  flex: 2;
-}
-
-.info-col h2 {
-  color: var(--secundario);
-  margin-bottom: 10px;
-}
-
-.info-extra p {
-  margin-top: 8px;
-  color: var(--texto-secundario);
-}
-
-/* BOTONES */
-.detalle-botones {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-}
-
-.btn-detalle {
-  padding: 10px 15px;
-  display: inline-block;
-  border-radius: 8px;
-  font-weight: bold;
-  color: white;
-  transition: var(--transicion);
-}
-
-.btn-detalle.blue {
-  background: var(--secundario);
-}
-.btn-detalle.blue:hover {
-  background: #1a7bff;
-}
-
-.btn-detalle.yellow {
-  background: #d4a300;
-}
-.btn-detalle.yellow:hover {
-  background: #f7c400;
-}
-
-/* ============================= */
-/* RESEÑAS DEL JUEGO             */
-/* ============================= */
-
-.detalle-reseñas h2 {
-  color: var(--secundario);
-  margin-bottom: 20px;
-}
-
-.reseñas-lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-/* CARD DE RESEÑA */
-.reseña-card {
-  background: var(--card);
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid var(--borde);
-  transition: var(--transicion);
-}
-
-.reseña-card:hover {
-  border-color: var(--primario);
-  transform: translateY(-4px);
-}
-
-.reseña-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.puntuacion {
-  color: var(--primario);
-  font-weight: bold;
-}
-
-.horas {
-  color: var(--texto-secundario);
-}
-
-.reseña-texto {
-  color: var(--texto);
-  margin-bottom: 15px;
-}
-
-.reseña-footer {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-}
-
-.dificultad {
-  color: var(--secundario);
-}
-
-.recomienda.si {
-  color: #00ff88;
-}
-
-.recomienda.no {
-  color: var(--primario);
-}
-
-/* ============================= */
-/* FORMULARIO DE JUEGOS          */
-/* ============================= */
-
-.form-container {
-  max-width: 550px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.form-title {
-  color: var(--secundario);
-  margin-bottom: 25px;
-  font-size: 2rem;
-}
-
-.form-card {
-  background: var(--card);
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid var(--borde);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: var(--transicion);
-}
-
-.form-card:hover {
-  border-color: var(--secundario);
-}
-
-.form-card label {
-  text-align: left;
-  color: var(--texto-secundario);
-  font-size: 0.95rem;
-}
-
-.check-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.btn-submit {
-  margin-top: 15px;
-  background: var(--primario);
-  padding: 12px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: var(--transicion);
-}
-
-.btn-submit:hover {
-  background: #ff1a52;
-}
-
-
-/* ============================= */
-/* LISTA DE RESEÑAS              */
-/* ============================= */
-
-.lista-reseñas {
-  margin-top: 20px;
-}
-
-.actions-top {
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-.btn-agregar-reseña {
-  background: var(--primario);
-  padding: 10px 16px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  transition: var(--transicion);
-}
-.btn-agregar-reseña:hover {
-  background: #ff1a52;
-}
-
-/* GRID GENERAL */
-.reseñas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-/* TARJETA DE RESEÑA */
-.reseña-card-grande {
-  background: var(--card);
-  border: 1px solid var(--borde);
-  padding: 18px;
-  border-radius: 12px;
-  transition: var(--transicion);
-}
-
-.reseña-card-grande:hover {
-  border-color: var(--secundario);
-  transform: translateY(-4px);
-}
-
-/* HEADER DE LA RESEÑA */
-.reseña-header-grande {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.puntuacion-grande {
-  font-size: 1.3rem;
-  color: var(--primario);
-}
-
-.horas {
-  color: var(--texto-secundario);
-}
-
-/* TEXTO */
-.reseña-texto {
-  color: var(--texto);
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-/* FOOTER */
-.reseña-footer-grande {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-.dificultad {
-  color: var(--secundario);
-}
-
-.recomienda.si {
-  color: #00ff88;
-}
-
-.recomienda.no {
-  color: var(--primario);
-}
-
-/* BOTONES */
-.reseña-botones {
-  display: flex;
-  gap: 12px;
-}
-
-/* ============================= */
-/* FORMULARIO DE RESEÑAS         */
-/* ============================= */
-
-.reseña-form textarea {
-  resize: none;
-}
-
-.reseña-form select,
-.reseña-form input[type="number"],
-.reseña-form textarea {
-  background: var(--fondo-secundario);
-  border: 1px solid var(--borde);
-  padding: 12px;
-  border-radius: 6px;
-  color: var(--texto);
-  transition: var(--transicion);
-}
-
-.reseña-form select:hover,
-.reseña-form input:hover,
-.reseña-form textarea:hover {
-  border-color: var(--secundario);
-}
-
-.reseña-form textarea:focus,
-.reseña-form select:focus,
-.reseña-form input:focus {
-  border-color: var(--primario);
-}
-
-
-/* ============================= */
-/* DASHBOARD                     */
-/* ============================= */
-
-.dashboard {
-  margin-top: 20px;
-}
-
-/* TARJETAS SUPERIORES */
-.dashboard-cards {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.dash-card {
-  flex: 1;
-  background: var(--card);
-  border: 1px solid var(--borde);
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  transition: var(--transicion);
-}
-
-.dash-card:hover {
-  border-color: var(--secundario);
-}
-
-.dash-num {
-  font-size: 2.8rem;
-  color: var(--primario);
-  display: block;
-  margin-top: 10px;
-}
-
-/* GRÁFICA DE BARRAS */
-.grafica-card {
-  background: var(--card);
-  border: 1px solid var(--borde);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-}
-
-.barras-container {
-  display: flex;
-  align-items: flex-end;
-  gap: 20px;
-  padding: 30px 0;
-}
-
-.barra-item {
-  text-align: center;
-}
-
-.barra {
-  width: 40px;
-  background: var(--primario);
-  border-radius: 4px;
-  margin-bottom: 8px;
-  transition: height 0.3s ease;
-}
-
-/* GRÁFICA PASTEL (CSS PURO) */
-.pastel {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.pastel-segmento {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: circle(50%);
-  transform: rotate(calc(var(--inicio) * 3.6deg));
-}
-
-.pastel-segmento::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: rotate(calc(var(--valor) * 3.6deg));
-  transform-origin: bottom center;
-}
-
-.pastel-leyenda {
-  list-style: none;
-  margin-top: 15px;
-}
-
-.leyenda-color {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  margin-right: 8px;
-}
-
-/* filtro de la biblioteca  */
-.filtros-bar {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  align-items: center;
-  background: #0d0f1a;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.filtro-buscar {
-  flex: 1;
-  padding: 8px;
-  border-radius: 6px;
-  background: #111425;
-  border: 1px solid #222744;
-  color: white;
-}
-
-.filtro-select {
-  padding: 8px;
-  border-radius: 6px;
-  background: #111425;
-  border: 1px solid #222744;
-  color: white;
-   width: 15%;
-}
-
-.btn-card.limpiar {
-  background: #2a3045;
-  color: white;
-  border: 1px solid #3d4463;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s;
-  max-width: 8%;
-  margin-bottom: 12px;
-}
-
-.btn-card.limpiar:hover {
-  background: #3b425e;
-}
+  inset: 0;
+  z-index: 1;
+} */
+
+  /* CONTENIDO */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+  /* TÍTULO */
+  .hero-content h1 {
+    font-size: 3rem;
+    color: var(--primario);
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+
+  /* SUBTEXTO */
+  .hero-content p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    color: var(--texto);
+  }
+
+  /* BOTONES */
+  .hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .btn-hero {
+    background: var(--secundario);
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: var(--transicion);
+  }
+
+  .btn-hero:hover {
+    background: #1a7bff;
+  }
+
+  .btn-hero-sec {
+    background: var(--primario);
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: var(--transicion);
+  }
+
+  .btn-hero-sec:hover {
+    background: #ff1a52;
+  }
+
+  /* ============================= */
+  /* SECCIÓN FUNCIONES             */
+  /* ============================= */
+
+  .seccion {
+    margin: 50px 0;
+  }
+
+  .seccion h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--secundario);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .lista-funciones {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .lista-funciones li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--borde);
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+  }
+
+  /* ============================= */
+  /* GRID DE VISTAS                */
+  /* ============================= */
+
+  .vistas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
+
+  .vista-card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--borde);
+    transition: var(--transicion);
+    font-size: 1.1rem;
+  }
+
+  .vista-card:hover {
+    background: var(--hover);
+    transform: translateY(-3px);
+    border-color: var(--secundario);
+  }
+
+
+  /* ============================= */
+  /* BIBLIOTECA DE JUEGOS          */
+  /* ============================= */
+
+  .biblioteca {
+    margin-top: 20px;
+  }
+
+  .titulo-pagina {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--secundario);
+    text-align: center;
+  }
+
+  .sin-juegos {
+    text-align: center;
+    color: var(--texto-secundario);
+    margin-top: 30px;
+  }
+
+  /* GRID */
+  .grid-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+  }
+
+  /* CARD */
+  .juego-card {
+    background: var(--card);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transicion);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .juego-card:hover {
+    border-color: var(--secundario);
+    transform: translateY(-5px);
+  }
+
+  /* IMAGEN */
+  .card-img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* INFO */
+  .card-info {
+    padding: 15px;
+  }
+
+  .card-info h3 {
+    color: var(--primario);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .card-detalle {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  /* BOTONES */
+  .card-botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .btn-card {
+    flex: 1;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: var(--transicion);
+    font-weight: bold;
+    border: none;
+  }
+
+  /* COLORES BOTONES */
+  .btn-card.blue {
+    background: var(--secundario);
+  }
+
+  .btn-card.blue:hover {
+    background: #1a7bff;
+  }
+
+  .btn-card.yellow {
+    background: #d4a300;
+  }
+
+  .btn-card.yellow:hover {
+    background: #f7c400;
+  }
+
+  .btn-card.red {
+    background: var(--primario);
+  }
+
+  .btn-card.red:hover {
+    background: #ff1a52;
+  }
+
+  /* ============================= */
+  /* DETALLE DEL JUEGO             */
+  /* ============================= */
+
+  .detalle-juego {
+    margin-top: 20px;
+  }
+
+  /* BANNER */
+  .detalle-banner {
+    position: relative;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  .detalle-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
+
+  .banner-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.5rem;
+    color: var(--primario);
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  }
+
+  .banner-overlay p {
+    font-size: 1.2rem;
+    color: var(--texto);
+  }
+
+  /* INFO */
+  .detalle-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .info-col {
+    flex: 2;
+  }
+
+  .info-col h2 {
+    color: var(--secundario);
+    margin-bottom: 10px;
+  }
+
+  .info-extra p {
+    margin-top: 8px;
+    color: var(--texto-secundario);
+  }
+
+  /* BOTONES */
+  .detalle-botones {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .btn-detalle {
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    transition: var(--transicion);
+  }
+
+  .btn-detalle.blue {
+    background: var(--secundario);
+  }
+
+  .btn-detalle.blue:hover {
+    background: #1a7bff;
+  }
+
+  .btn-detalle.yellow {
+    background: #d4a300;
+  }
+
+  .btn-detalle.yellow:hover {
+    background: #f7c400;
+  }
+
+  /* ============================= */
+  /* RESEÑAS DEL JUEGO             */
+  /* ============================= */
+
+  .detalle-reseñas h2 {
+    color: var(--secundario);
+    margin-bottom: 20px;
+  }
+
+  .reseñas-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  /* CARD DE RESEÑA */
+  .reseña-card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--borde);
+    transition: var(--transicion);
+  }
+
+  .reseña-card:hover {
+    border-color: var(--primario);
+    transform: translateY(-4px);
+  }
+
+  .reseña-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .puntuacion {
+    color: var(--primario);
+    font-weight: bold;
+  }
+
+  .horas {
+    color: var(--texto-secundario);
+  }
+
+  .reseña-texto {
+    color: var(--texto);
+    margin-bottom: 15px;
+  }
+
+  .reseña-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+
+  .dificultad {
+    color: var(--secundario);
+  }
+
+  .recomienda.si {
+    color: #00ff88;
+  }
+
+  .recomienda.no {
+    color: var(--primario);
+  }
+
+  /* ============================= */
+  /* FORMULARIO DE JUEGOS          */
+  /* ============================= */
+
+  .form-container {
+    max-width: 550px;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  .form-title {
+    color: var(--secundario);
+    margin-bottom: 25px;
+    font-size: 2rem;
+  }
+
+  .form-card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--borde);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: var(--transicion);
+  }
+
+  .form-card:hover {
+    border-color: var(--secundario);
+  }
+
+  .form-card label {
+    text-align: left;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+  }
+
+  .check-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-submit {
+    margin-top: 15px;
+    background: var(--primario);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicion);
+  }
+
+  .btn-submit:hover {
+    background: #ff1a52;
+  }
+
+
+  /* ============================= */
+  /* LISTA DE RESEÑAS              */
+  /* ============================= */
+
+  .lista-reseñas {
+    margin-top: 20px;
+  }
+
+  .actions-top {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .btn-agregar-reseña {
+    background: var(--primario);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: var(--transicion);
+  }
+
+  .btn-agregar-reseña:hover {
+    background: #ff1a52;
+  }
+
+  /* GRID GENERAL */
+  .reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  /* TARJETA DE RESEÑA */
+  .reseña-card-grande {
+    background: var(--card);
+    border: 1px solid var(--borde);
+    padding: 18px;
+    border-radius: 12px;
+    transition: var(--transicion);
+  }
+
+  .reseña-card-grande:hover {
+    border-color: var(--secundario);
+    transform: translateY(-4px);
+  }
+
+  /* HEADER DE LA RESEÑA */
+  .reseña-header-grande {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .puntuacion-grande {
+    font-size: 1.3rem;
+    color: var(--primario);
+  }
+
+  .horas {
+    color: var(--texto-secundario);
+  }
+
+  /* TEXTO */
+  .reseña-texto {
+    color: var(--texto);
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  /* FOOTER */
+  .reseña-footer-grande {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .dificultad {
+    color: var(--secundario);
+  }
+
+  .recomienda.si {
+    color: #00ff88;
+  }
+
+  .recomienda.no {
+    color: var(--primario);
+  }
+
+  /* BOTONES */
+  .reseña-botones {
+    display: flex;
+    gap: 12px;
+  }
+
+  /* ============================= */
+  /* FORMULARIO DE RESEÑAS         */
+  /* ============================= */
+
+  .reseña-form textarea {
+    resize: none;
+  }
+
+  .reseña-form select,
+  .reseña-form input[type="number"],
+  .reseña-form textarea {
+    background: var(--fondo-secundario);
+    border: 1px solid var(--borde);
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--texto);
+    transition: var(--transicion);
+  }
+
+  .reseña-form select:hover,
+  .reseña-form input:hover,
+  .reseña-form textarea:hover {
+    border-color: var(--secundario);
+  }
+
+  .reseña-form textarea:focus,
+  .reseña-form select:focus,
+  .reseña-form input:focus {
+    border-color: var(--primario);
+  }
+
+
+  /* ============================= */
+  /* DASHBOARD                     */
+  /* ============================= */
+
+  .dashboard {
+    margin-top: 20px;
+  }
+
+  /* TARJETAS SUPERIORES */
+  .dashboard-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .dash-card {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--borde);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transicion);
+  }
+
+  .dash-card:hover {
+    border-color: var(--secundario);
+  }
+
+  .dash-num {
+    font-size: 2.8rem;
+    color: var(--primario);
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* GRÁFICA DE BARRAS */
+  .grafica-card {
+    background: var(--card);
+    border: 1px solid var(--borde);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .barras-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .barra-item {
+    text-align: center;
+  }
+
+  .barra {
+    width: 40px;
+    background: var(--primario);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    transition: height 0.3s ease;
+  }
+
+  /* GRÁFICA PASTEL (CSS PURO) */
+  .pastel {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .pastel-segmento {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50%);
+    transform: rotate(calc(var(--inicio) * 3.6deg));
+  }
+
+  .pastel-segmento::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(var(--valor) * 3.6deg));
+    transform-origin: bottom center;
+  }
+
+  .pastel-leyenda {
+    list-style: none;
+    margin-top: 15px;
+  }
+
+  .leyenda-color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
+
+  /* filtro de la biblioteca  */
+  .filtros-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    background: #0d0f1a;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .filtro-buscar {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    background: #111425;
+    border: 1px solid #222744;
+    color: white;
+  }
+
+  .filtro-select {
+    padding: 8px;
+    border-radius: 6px;
+    background: #111425;
+    border: 1px solid #222744;
+    color: white;
+    width: 15%;
+  }
+
+  .btn-card.limpiar {
+    background: #2a3045;
+    color: white;
+    border: 1px solid #3d4463;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    max-width: 8%;
+    margin-bottom: 12px;
+  }
+
+  .btn-card.limpiar:hover {
+    background: #3b425e;
+  }
+
+
+
+  /* session de plataformas favoritas */
+  .plataformas-section {
+    margin-top: 20px;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+  }
+
+  .plataformas-titulo {
+    font-size: 2.4rem;
+    color: var(--texto);
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .plataformas-orbita {
+    position: relative;
+    width: 900px;
+    height: 380px;
+    margin: 0 auto;
+  }
+
+  .logo-plataforma {
+    position: absolute;
+    width: 120px;
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
+    z-index: 2;
+
+    /* dos animaciones: primero fade-in, luego float en loop (delay para stagger) */
+    animation:
+      fadeIn 0.5s ease forwards,
+      float 4s ease-in-out 0.6s infinite;
+    transform-origin: center;
+    cursor: pointer;
+    opacity: 0;
+    /* se animará a 1 con fadeIn */
+  }
+
+  /* keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-12px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* posiciones relativas dentro del contenedor (ajústalas si hace falta) */
+  .orbita-1 {
+    top: 50px;
+    left: calc(89% - 38px);
+    transform: translateX(-180px);
+    animation-delay: .15s;
+  }
+
+  .orbita-2 {
+    top: 36px;
+    right: calc(50% - 38px);
+    transform: translateX(100px);
+    animation-delay: .30s;
+  }
+
+  .orbita-3 {
+    bottom: 10px;
+    right: 40px;
+    animation-delay: .45s;
+  }
+
+  .orbita-4 {
+    bottom: 10px;
+    left: 40px;
+    animation-delay: .60s;
+  }
+
+  .orbita-5 {
+    top: 36px;
+    left: 20px;
+    animation-delay: .75s;
+  }
+
+  .orbita-6 {
+    bottom: 10px;
+    left: 390px;
+    animation-delay: .60s;
+  }
+
+  /* hover: ligero zoom sin cortar */
+  .logo-plataforma:hover {
+    transform: scale(1.12);
+    transition: transform 160ms ease;
+  }
+
+
+
+
+
+  /* ===== Sección de funciones con imagen lateral ===== */
+  .seccion-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 30px 0;
+    padding: 20px 0;
+  }
+
+  /* Lista */
+  .lista-funciones {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lista-funciones li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  /* Marcador tipo punto brillante */
+  .lista-funciones li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+    background: var(--primario);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--primario);
+  }
+
+  /* Imagen */
+  .img-soldado {
+    flex: 1.3;
+    /* aumenta el espacio destinado a la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* centra verticalmente */
+  }
+
+  .img-soldado img {
+    width: 100%;
+    /* se hace MUCHO más grande */
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+    transform: translateX(30px);
+    opacity: 0;
+    animation: slideIn 0.9s ease forwards;
+    margin-left: 10px;
+    max-width: 550px;
+  }
+
+  /* Animación */
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .seccion {
+      flex-direction: column;
+      text-align: center;
+    }
+
+
+  }
