@@ -3,7 +3,7 @@ import {
   crearReseña,
   obtenerReseña,
   actualizarReseña,
-} from "../services/reseñasService";
+} from "../services/resenasService";
 import { obtenerJuegos } from "../services/juegosService";
 import { useNavigate, useParams } from "react-router-dom";
 import "./../styles/componentes.css";
