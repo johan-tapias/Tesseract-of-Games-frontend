@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { obtenerReseñas, eliminarReseña } from "../services/reseñasService";
+import { obtenerReseñas, eliminarReseña } from "../services/resenasService";
 import { Link } from "react-router-dom";
 import "./../styles/componentes.css";
 
