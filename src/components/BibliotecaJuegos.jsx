@@ -185,8 +185,8 @@ export default function BibliotecaJuegos() {
 
             <div className="card-info">
               <h3>{juego.titulo}</h3>
-              <p className="card-detalle">
-                {juego.genero} • {juego.plataforma}
+              <p className="card-detalle"> <strong>
+                {juego.genero} • {juego.plataforma}</strong>
               </p>
 
               <div className="card-botones">

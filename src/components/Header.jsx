@@ -6,7 +6,7 @@ export default function Header() {
     <header className="header">
       <div className="header-logo">
         {/* Espacio reservado para futuro logo */}
-        <span className="logo-text">GameTracker</span>
+        <span className="logo-text">Tesseract of Games</span>
       </div>
 
       <nav className="header-nav">

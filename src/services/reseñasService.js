@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/resenas";
+const API_URL = "https://tesseract-of-games-backend.onrender.com/api/resenas";
 
 export const obtenerReseñas = () => axios.get(API_URL);
 

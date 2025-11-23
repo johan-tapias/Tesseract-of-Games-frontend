@@ -60,12 +60,12 @@ export default function EstadisticasPersonales() {
       <div className="dashboard-cards">
         <div className="dash-card">
           <h3>Juegos Completados</h3>
-          <span className="dash-num">{totalCompletados}</span>
+          <span className="dash-num"><strong>{totalCompletados}</strong></span>
         </div>
 
         <div className="dash-card">
           <h3>Horas Jugadas</h3>
-          <span className="dash-num">{totalHoras}</span>
+          <span className="dash-num"><strong>{totalHoras}</strong></span>
         </div>
       </div>
 
@@ -122,8 +122,9 @@ export default function EstadisticasPersonales() {
           style={{
             background: colores[i % colores.length]
           }}
-        ></span>
+        ></span><strong>
         {p.label}
+        </strong>
       </li>
     ))}
   </ul>

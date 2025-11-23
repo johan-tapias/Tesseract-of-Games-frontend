@@ -1,4 +1,6 @@
-/* VARIABLES DE COLOR        */
+/* ========================= */
+/*     VARIABLES             */
+/* ========================= */
 
 :root {
   --fondo: #0d0d0f;
@@ -9,7 +11,8 @@
   --texto-secundario: #9a9a9a;
 
   --primario: #ff003c; 
-  --secundario: #c92c2c; 
+  --secundario: #c92c2c;
+  --terciario: #1d3a6d;
 
   --borde: #2a2a33;
   --hover: #1f1f27;
@@ -34,7 +37,6 @@ body {
   line-height: 1.5;
 }
 
-/* ===== TITULOS ===== */
 h1, h2, h3, h4, .titulo-pagina {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
@@ -49,7 +51,6 @@ h1, h2 {
   text-shadow: 0 0 10px rgba(255, 0, 60, 0.35);
 }
 
-/* Scrollbar gamer */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -58,17 +59,13 @@ h1, h2 {
   border-radius: 4px;
 }
 
-/* Links */
 a {
   color: var(--secundario);
   text-decoration: none;
   transition: var(--transicion);
 }
-a:hover {
-  color: var(--primario);
-}
 
-/* Inputs */
+
 input, select, textarea {
   background: var(--fondo-secundario);
   border: 1px solid var(--borde);
@@ -83,7 +80,6 @@ input:focus, textarea:focus, select:focus {
   border-color: var(--secundario);
 }
 
-/* Botones */
 button {
   background: var(--primario);
   border: none;
@@ -95,10 +91,12 @@ button {
   font-weight: bold;
 }
 button:hover {
-  background: #ff1a52;
+  background: var(--secundario);
 }
 
-/* Fondo oscuro transparente */
+/* ======================================= */
+/* MODAL PARA CONFIRMAR ACCION DE ELIMINAR */
+/* ========================================*/
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -112,7 +110,6 @@ button:hover {
   z-index: 999;
 }
 
-/* Caja del modal */
 .modal-container {
   background: #0d0d0f;
   border: 2px solid #222;
@@ -123,19 +120,16 @@ button:hover {
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
 }
 
-/* Título */
 .modal-container h2 {
   color: #fff;
   margin-bottom: 15px;
 }
 
-/* Texto */
 .modal-container p {
   color: #ccc;
   margin-bottom: 25px;
 }
 
-/* Botones del modal */
 .modal-buttons {
   display: flex;
   justify-content: space-between;
@@ -151,7 +145,6 @@ button:hover {
   transition: 0.2s;
 }
 
-/* Botón cancelar */
 .modal-buttons .cancelar {
   background: #1a1a1d;
   color: #87a0ff;
@@ -162,13 +155,12 @@ button:hover {
   background: #222;
 }
 
-/* Botón eliminar */
 .modal-buttons .eliminar {
-  background: #ff3b3b;
+  background: var(--primario);
   color: #fff;
   margin-left: 10px;
 }
 
 .modal-buttons .eliminar:hover {
-  background: #ff1d1d;
+  background: var(--secundario);
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/juegos";
+const API_URL = "https://tesseract-of-games-backend.onrender.com/api/juegos";
 
 export const obtenerJuegos = () => axios.get(API_URL);
 export const obtenerJuego = (id) => axios.get(`${API_URL}/${id}`);

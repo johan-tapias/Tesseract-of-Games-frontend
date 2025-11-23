@@ -57,16 +57,9 @@
   color: var(--texto-secundario);
 }
 
-
-
 /* ============================= */
-/* HOME / HERO                   */
+/* HOME / HERO CON VIDEO         */
 /* ============================= */
-
-/* -----------------------------------------
-   HERO con video — estilo original adaptado
-   ----------------------------------------- */
-
 .hero {
   position: relative;
   height: 70vh;
@@ -78,7 +71,6 @@
   margin: 0;
 }
 
-/* VIDEO DE FONDO */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -87,23 +79,18 @@
   object-fit: cover;
 }
  
-  /* CONTENIDO */
   .hero-content {
     position: relative;
     z-index: 2;
     margin-top: 60px;
   }
 
-
-
-  /* TÍTULO */
   .hero-content h1 {
     font-size: 3.8rem;
     color: var(--primario);
-    text-shadow: 0 0 15px rgba(0, 0, 0, 100%);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 100%);
   }
 
-  /* SUBTEXTO */
   .hero-content p {
     max-width: 700px;
     margin: 20px auto;
@@ -111,7 +98,6 @@
     color: var(--texto);
   }
 
-  /* BOTONES */
   .hero-buttons {
     margin-top: 70px;
     display: flex;
@@ -273,19 +259,19 @@
 
   /* COLORES BOTONES */
   .btn-card.blue {
-    background: var(--secundario);
+    background: var(--primario);
   }
 
   .btn-card.blue:hover {
-    background: #1a7bff;
+    background: var(--secundario);
   }
 
   .btn-card.yellow {
-    background: #d4a300;
+    background: var(--terciario);
   }
 
   .btn-card.yellow:hover {
-    background: #f7c400;
+    background: var(--terciario);
   }
 
   .btn-card.red {
@@ -293,7 +279,7 @@
   }
 
   .btn-card.red:hover {
-    background: #ff1a52;
+    background: var(--secundario);
   }
 
   /* ============================= */
@@ -383,11 +369,11 @@
   }
 
   .btn-detalle.yellow {
-    background: #d4a300;
+    background: #1d3a6d;
   }
 
   .btn-detalle.yellow:hover {
-    background: #f7c400;
+    background: #1d3a6d;
   }
 
   /* ============================= */
@@ -437,6 +423,8 @@
   .reseña-texto {
     color: var(--texto);
     margin-bottom: 15px;
+    overflow: overlay;
+    height: 180px;
   }
 
   .reseña-footer {
@@ -498,6 +486,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-direction: column-reverse;
   }
 
   .btn-submit {
@@ -512,7 +501,7 @@
   }
 
   .btn-submit:hover {
-    background: #ff1a52;
+    background: var(--secundario);
   }
 
 
@@ -526,13 +515,13 @@
 
   .actions-top {
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   /* GRID GENERAL */
   .reseñas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 25px;
   }
 
@@ -558,8 +547,8 @@
   }
 
   .puntuacion-grande {
-    font-size: 1.3rem;
-    color: var(--primario);
+    font-size: 1rem;
+    color: var(--texto);
   }
 
   .horas {
@@ -571,6 +560,7 @@
     color: var(--texto);
     margin-bottom: 15px;
     line-height: 1.4;
+    font-size: 15px;
   }
 
   /* FOOTER */
@@ -582,7 +572,7 @@
   }
 
   .dificultad {
-    color: var(--secundario);
+    color: var(--texto);
   }
 
   .recomienda.si {
@@ -696,7 +686,7 @@
     transition: height 0.3s ease;
   }
 
-  /* GRÁFICA PASTEL (CSS PURO) */
+  /* GRÁFICA PASTEL */
   .pastel {
     position: relative;
     width: 200px;
@@ -815,14 +805,13 @@
     filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
     z-index: 2;
 
-    /* dos animaciones: primero fade-in, luego float en loop (delay para stagger) */
+    /*animaciones: primero fade-in, luego float en loop (delay para stagger) */
     animation:
       fadeIn 0.5s ease forwards,
       float 4s ease-in-out 0.6s infinite;
     transform-origin: center;
     cursor: pointer;
     opacity: 0;
-    /* se animará a 1 con fadeIn */
   }
 
   /* keyframes */
@@ -852,7 +841,7 @@
     }
   }
 
-  /* posiciones relativas dentro del contenedor (ajústalas si hace falta) */
+  /* posiciones relativas dentro del contenedor para los logos*/
   .orbita-1 {
     top: 50px;
     left: calc(89% - 38px);
@@ -861,7 +850,7 @@
   }
 
   .orbita-2 {
-    top: 36px;
+    top: 50px;
     right: calc(50% - 38px);
     transform: translateX(100px);
     animation-delay: .30s;
@@ -869,14 +858,15 @@
 
   .orbita-3 {
     bottom: 10px;
-    right: 40px;
+    right: 20px;
     animation-delay: .45s;
   }
 
   .orbita-4 {
     bottom: 10px;
-    left: 40px;
+    left: 20px;
     animation-delay: .60s;
+    width: 135px;
   }
 
   .orbita-5 {
@@ -886,20 +876,16 @@
   }
 
   .orbita-6 {
-    bottom: 10px;
-    left: 390px;
+    bottom: 20px;
+    left: 340px;
     animation-delay: .60s;
+    width: 190px;
   }
 
-  /* hover: ligero zoom sin cortar */
   .logo-plataforma:hover {
     transform: scale(1.12);
     transition: transform 160ms ease;
   }
-
-
-
-
 
   /* ===== Sección de funciones con imagen lateral ===== */
   .seccion-img {
@@ -927,7 +913,6 @@
     position: relative;
   }
 
-  /* Marcador tipo punto brillante */
   .lista-funciones li::before {
     content: "";
     position: absolute;
@@ -943,16 +928,13 @@
   /* Imagen */
   .img-soldado {
     flex: 1.3;
-    /* aumenta el espacio destinado a la imagen */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* centra verticalmente */
   }
 
   .img-soldado img {
     width: 80%;
-    /* se hace MUCHO más grande */
     filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
     transform: translateX(30px);
     opacity: 0;
@@ -980,7 +962,7 @@
   }
 
 
-  /* ===== SECCIÓN DESTACADA (imagen izquierda + frase derecha) ===== */
+  /* ===== SECCIÓN DESTACADA TEXTO E IMAGEN ===== */
 .seccion-destacada {
   display: flex;
   align-items: center;
@@ -998,19 +980,19 @@
 }
 
 .destacada-img {
-  flex: 1.2;                      /* da más espacio a la imagen */
+  flex: 1.2;                     
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .destacada-img img {
-  width: 90%;                    /* imagen mucho más grande */
-  max-width: none;                /* desbloquea cualquier límite */
+  width: 90%;                   
+  max-width: none;               
   filter: drop-shadow(0 18px 35px rgba(0,0,0,0.7));
   animation: fadeInLeft 0.9s ease forwards;
   opacity: 0;
-  transform: translateX(-20px);   /* mejora el efecto al entrar */
+  transform: translateX(-20px);  
 }
 
 /* Texto */
@@ -1053,7 +1035,7 @@
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
   .seccion-destacada {
     flex-direction: column;
@@ -1069,14 +1051,7 @@
   }
 }
 
-
-
-
-
-
-
-
-/* ESTILO BASE PARA TODOS LOS BOTONES GAMER */
+/* ESTILO BASE PARA TODOS LOS BOTONES PRINCIPALES*/
 .btn-agregar,
 .btn-hero,
 .btn-agregar-reseña,
@@ -1101,7 +1076,7 @@
     inset 0 0 6px rgba(255, 0, 80, 0.4);
 }
 
-/* ✦ EFECTO BRILLO AL PASAR EL MOUSE */
+/* EFECTO BRILLO AL PASAR EL MOUSE */
 .btn-agregar:hover,
 .btn-hero:hover,
 .btn-agregar-reseña:hover,
@@ -1113,7 +1088,7 @@
   transform: translateY(-2px);
 }
 
-/* ✦ EFECTO DE ONDA (LUZ QUE PASA) */
+/* EFECTO DE ONDA */
 .btn-agregar::before,
 .btn-hero::before,
 .btn-agregar-reseña::before,
@@ -1140,15 +1115,12 @@
   left: 120%;
 }
 
-/* DIFERENCIAS ENTRE CADA BOTÓN */
 
-/* 1. BOTÓN AGREGAR → NEÓN ROJO FUERTE */
 .btn-agregar {
   background: #230006;
   border: 2px solid #ff0044;
 }
 
-/* 2. BTN HERO PRINCIPAL → NEÓN AZUL ELÉCTRICO */
 .btn-hero {
   background: #330010;
   border: 2px solid #ff0044;
@@ -1163,7 +1135,6 @@
     inset 0 0 12px rgba(255, 0, 127, 0.8);
 }
 
-/* 3. BTN HERO SECUNDARIO → NEÓN MAGENTA/RUBÍ */
 .btn-hero-sec {
   background: #330010;
   border: 2px solid #ff0044;
@@ -1178,13 +1149,10 @@
     inset 0 0 12px rgba(255, 0, 127, 0.8);
 }
 
-
-
 .div-btn{
   display: flex;
   justify-content: center;
 }
-
 
 .seccion-vista-sistema{
   padding: 10px 70px; 
@@ -1192,4 +1160,10 @@
 .seccion-vista-sistema h2{
   margin-left: 40px;
   font-size: 1.6rem;
+}
+
+
+header a.btn-agregar{
+  padding: 5px 10px;
+  font-size: 15px;
 }

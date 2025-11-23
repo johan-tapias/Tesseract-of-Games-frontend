@@ -24,7 +24,7 @@ export default function JuegoDetalle() {
         <img src={juego.imagenPortada} alt={juego.titulo} />
         <div className="banner-overlay">
           <h1>{juego.titulo}</h1>
-          <p>{juego.genero} • {juego.plataforma}</p>
+          <p><strong>{juego.genero} • {juego.plataforma}</strong></p>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ export default function JuegoDetalle() {
         <h2>Reseñas del Juego</h2>
 
         {reseñas.length === 0 && (
-          <p className="sin-juegos">Este juego no tiene reseñas aún.</p>
+          <p className="sin-juegos"><strong>Este juego no tiene reseñas aún.</strong></p>
         )}
 
         <div className="reseñas-lista">

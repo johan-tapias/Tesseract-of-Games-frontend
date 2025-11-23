@@ -15,7 +15,7 @@ export default function Home() {
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <h1 className="titulo-pagina" >Bienvenido a GameTracker</h1>
+          <h1 className="titulo-pagina" >Bienvenido a Tesseract of Games</h1>
         
           <div className="hero-buttons">
             <Link to="/biblioteca" className="btn-hero">
@@ -60,17 +60,17 @@ export default function Home() {
         </h2>
 
         <div className="plataformas-orbita">
-          <img src="/logos/xbox.jpg" className="logo-plataforma orbita-1" />
+          <img src="/logos/xbox.PNG" className="logo-plataforma orbita-1" />
           <img
-            src="/logos/playstation.jpg"
+            src="/logos/playstation.PNG"
             className="logo-plataforma orbita-2"
           />
           <img
-            src="/logos/playstation.jpg"
+            src="/logos/activision.PNG"
             className="logo-plataforma orbita-6"
           />
-          <img src="/logos/nintendo.jpg" className="logo-plataforma orbita-3" />
-          <img src="/logos/steam.webp" className="logo-plataforma orbita-4" />
+          <img src="/logos/nintendo.PNG" className="logo-plataforma orbita-3" />
+          <img src="/logos/steam.PNG" className="logo-plataforma orbita-4" />
           <img src="/logos/epic.png" className="logo-plataforma orbita-5" />
         </div>
       </section>

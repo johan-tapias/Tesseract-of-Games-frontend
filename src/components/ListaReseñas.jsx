@@ -80,14 +80,14 @@ export default function ListaReseñas() {
         {reseñas.map((r) => (
           <div key={r._id} className="reseña-card-grande">
             <div className="reseña-header-grande">
-              <span className="puntuacion-grande">{r.puntuacion}⭐</span>
-              <span className="horas">{r.horasJugadas} hrs</span>
+              <span className="puntuacion-grande">Calificacion: {r.puntuacion}⭐</span>
+              <span className="horas"><strong>Horas jugadas:</strong> {r.horasJugadas} h</span>
             </div>
 
             <p className="reseña-texto">{r.textoReseña}</p>
 
             <div className="reseña-footer-grande">
-              <span className="dificultad">{r.dificultad}</span>
+              <span className="dificultad"><strong>Dificultad:</strong> {r.dificultad}</span>
               <span
                 className={r.recomendaria ? "recomienda si" : "recomienda no"}
               >
