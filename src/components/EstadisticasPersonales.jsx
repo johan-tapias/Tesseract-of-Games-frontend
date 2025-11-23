@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { obtenerJuegos } from "../services/juegosService";
-import { obtenerReseñas } from "../services/reseñasService";
+import { obtenerReseñas } from "../services/resenasService";
 import "./../styles/componentes.css";
 
 export default function EstadisticasPersonales() {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { obtenerJuego } from "../services/juegosService";
-import { obtenerReseñasPorJuego } from "../services/reseñasService";
+import { obtenerReseñasPorJuego } from "../services/resenasService";
 import { useParams, Link } from "react-router-dom";
 import "./../styles/componentes.css";
 
